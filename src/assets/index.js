@@ -1,2 +1,16 @@
 export { default as atto31 } from "./atto-3-1.jpg";
 export { default as logo } from "./logo.png";
+export { default as banner } from "./banner.webp";
+export { default as banner2 } from "./banner2.jpg";
+export { default as byd_atto_3 } from "./BYD_ATTO_3.png";
+export { default as byd_dolphin } from "./BYD_DOLPHIN.png";
+export { default as byd_m6 } from "./BYD_M6.png";
+export { default as byd_seal } from "./BYD_SEAL.png";
+export { default as dolphin_model } from "./dolphin-model.jpg";
+export { default as instagram } from "./instagram.webp";
+export { default as m6_model } from "./m6-model.jpg";
+export { default as pelanggan_1 } from "./pelanggan-1.jpg";
+export { default as pelanggan_2 } from "./pelanggan-2.jpg";
+export { default as photo_card } from "./photo-card.png";
+export { default as seal_model } from "./seal-model.jpg";
+export { default as whatsapp } from "./whatsapp.png";

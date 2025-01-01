@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useMobileResponsive } from "../hooks/useMobileResponsive";
 import ModelsCard from "./Models";
 import { CAR_LIST } from "./constant";
-import { logo } from "../assets";
+import { logo, photo_card, whatsapp } from "../assets";
 
 const Modal = ({ visible, onClose }) => {
   if (!visible) return null;
@@ -30,7 +30,7 @@ const Modal = ({ visible, onClose }) => {
         {/* Profile Picture */}
         <div className="flex justify-center mb-6">
           <img
-            src="/src/assets/photo-card.png"
+            src={photo_card}
             alt="Fauzan Azila"
             className="w-32 h-32 rounded-full shadow-lg"
           />
@@ -52,7 +52,7 @@ const Modal = ({ visible, onClose }) => {
             onClick={handleWhatsAppRedirect}
             className="w-full px-4 py-2 text-black font-semibold rounded-lg shadow-md hover:bg-green-600 hover:text-white flex items-center"
           >
-            <img src="/src/assets/whatsapp.png" width={100} height={100} />
+            <img src={whatsapp} width={100} height={100} />
             Hubungi via WhatsApp
           </button>
         </div>

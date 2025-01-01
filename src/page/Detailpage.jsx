@@ -126,7 +126,7 @@ const Detailpage = () => {
             {carData.title}
           </div>
           {!isMobile && (
-            <div className="max-w-md mx-auto bg-gray-900 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 text-white rounded-lg shadow-lg p-6 absolute left-0 ml-8">
+            <div className="max-w-md mx-auto bg-gray-900 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 text-white rounded-lg shadow-lg p-6 absolute left-0 ml-8 top-0 mt-24">
               <div className="flex justify-center mb-6 gap-2">
                 <button
                   onClick={() => setActiveTab("tab1")}
@@ -177,7 +177,7 @@ const Detailpage = () => {
                   </li>
                 </ul>
               </div>
-              <div className="flex justify-center mt-8">
+              <div className="flex justify-center mt-8 h-6">
                 <button
                   onClick={() => handleWhatsAppRedirect(carData.title)}
                   className="group flex h-min items-center disabled:opacity-50 disabled:hover:opacity-50 hover:opacity-95 justify-center ring-none rounded-lg shadow-lg font-semibold py-2 px-4 font-dm focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-blue-600 border-b-blue-700 disabled:border-0 disabled:bg-blue-600 disabled:text-white ring-white text-white border-b-4 hover:border-0 active:border-0 hover:text-gray-100 active:bg-blue-600 active:text-gray-300 focus-visible:outline-blue-600 text-sm sm:text-base"

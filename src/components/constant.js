@@ -1,24 +1,24 @@
-import { atto31 } from "../assets";
+import { atto31, byd_atto_3, byd_dolphin, byd_m6, byd_seal, dolphin_model, m6_model, seal_model } from "../assets";
 
 export const CAR_LIST = [
   {
     title: "BYD ATTO 3",
-    img: "/src/assets/BYD_ATTO_3.png",
+    img: byd_atto_3,
     link: "/type/byd-atto-3",
   },
   {
     title: "BYD M6",
-    img: "/src/assets/BYD_M6.png",
+    img: byd_m6,
     link: "/type/byd-m6",
   },
   {
     title: "BYD SEAL",
-    img: "/src/assets/BYD_SEAL.png",
+    img: byd_seal,
     link: "/type/byd-seal",
   },
   {
     title: "BYD DOLPHIN",
-    img: "/src/assets/BYD_DOLPHIN.png",
+    img: byd_dolphin,
     link: "/type/byd-dolphin",
   },
 ];
@@ -57,7 +57,7 @@ export const CAR_DETAILS = [
     },
   },
   {
-    background: "/src/assets/seal-model.jpg",
+    background: seal_model,
     link: "byd-seal",
     title: "BYD SEAL",
     row1: "Jarak (NEDC)",
@@ -89,7 +89,7 @@ export const CAR_DETAILS = [
     },
   },
   {
-    background: "/src/assets/dolphin-model.jpg",
+    background: dolphin_model,
     link: "byd-dolphin",
     title: "BYD DOLPHIN",
     row1: "0-100km/j",
@@ -121,7 +121,7 @@ export const CAR_DETAILS = [
     },
   },
   {
-    background: "/src/assets/m6-model.jpg",
+    background: m6_model,
     link: "byd-m6",
     title: "BYD M6",
     row1: "Jarak Tempuh",
