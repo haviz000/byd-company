@@ -7,7 +7,6 @@ const Home = React.lazy(() => import("./page/Homepage"));
 const Detail = React.lazy(() => import("./page/Detailpage"));
 const Gallery = React.lazy(() => import("./page/Gallery"));
 const About = React.lazy(() => import("./page/PriceList"));
-const Contact = React.lazy(() => import("./page/Contact"));
 
 function App() {
   return (
@@ -17,7 +16,6 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/price-list" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
           <Route path="/type/:id" element={<Detail />} />
         </Routes>
       </Suspense>
