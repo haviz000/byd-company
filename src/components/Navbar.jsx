@@ -105,7 +105,9 @@ const Navbar = ({ backgroundColor, textDark }) => {
 
   return (
     <div
-      className={`sticky top-0 z-50 flex justify-between pt-8 items-center pb-4 bg-${backgroundColor}`}
+      className={`sticky top-0 z-50 flex justify-between pt-8 items-center pb-4 ${
+        backgroundColor ? "bg-transparent" : "bg-neutral-800"
+      }`}
     >
       <div className="flex justify-between items-center w-full mx-12">
         {/* Logo */}
