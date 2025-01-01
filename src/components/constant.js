@@ -1,3 +1,5 @@
+import { atto31 } from "../assets";
+
 export const CAR_LIST = [
   {
     title: "BYD ATTO 3",
@@ -23,7 +25,7 @@ export const CAR_LIST = [
 
 export const CAR_DETAILS = [
   {
-    background: "/src/assets/atto-3-1.jpg",
+    background: atto31,
     link: "byd-atto-3",
     title: "BYD ATTO 3",
     row1: "0-100km/j",

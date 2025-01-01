@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useMobileResponsive } from "../hooks/useMobileResponsive";
 import ModelsCard from "./Models";
 import { CAR_LIST } from "./constant";
+import { logo } from "../assets";
 
 const Modal = ({ visible, onClose }) => {
   if (!visible) return null;
@@ -110,7 +111,7 @@ const Navbar = ({ backgroundColor, textDark }) => {
         {/* Logo */}
         <Link to="/">
           <img
-            src="/src/assets/logo.png"
+            src={logo}
             width="100px"
             height="100px"
             className="cursor-pointer"
