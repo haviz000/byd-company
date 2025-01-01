@@ -1,6 +1,12 @@
 import { CAR_PRICE } from "./constant";
 
 const PriceListComponent = () => {
+  const handleWhatsAppRedirect = (unitName) => {
+    const message = `Hallo, Saya mau beli unit ${unitName}`;
+    const encodedMessage = encodeURIComponent(message || "Hello!");
+    const waUrl = `https://wa.me/6287856658439?text=${encodedMessage}`;
+    window.open(waUrl, "_blank");
+  };
   return (
     <div className="space-y-5 px-8 py-12 h-screen mb-6">
       <div className="container flex space-x-2">
@@ -73,7 +79,7 @@ const PriceListComponent = () => {
                               stroke-linejoin="round"
                             ></path>
                           </svg>
-                          <span>Ramah Lingkungan</span>
+                          <span>Melayani Jabodetabek dan sekitarnya</span>
                         </li>
                         <li className="flex items-center font-medium space-x-2 text-black">
                           <svg
@@ -90,16 +96,14 @@ const PriceListComponent = () => {
                               stroke-linejoin="round"
                             ></path>
                           </svg>
-                          <span>Lebih Elegan</span>
+                          <span>Proses Mudah dan Cepat</span>
                         </li>
                       </ul>
                     </div>
                   </div>
                   <div className="pt-2">
-                    <a
-                      href="/billing"
-                      type="button"
-                      target="_blank"
+                    <button
+                      onClick={() => handleWhatsAppRedirect(item.title)}
                       className="appearance-none inline-flex hover:shadow-2xl transition-all duration-300 hover:scale-105 items-center group space-x-2.5 bg-black text-white py-4 px-5 rounded-2xl cursor-pointer"
                     >
                       <span className="w-full font-semibold text-base">
@@ -119,7 +123,7 @@ const PriceListComponent = () => {
                           stroke-linejoin="round"
                         ></path>
                       </svg>
-                    </a>
+                    </button>
                   </div>
                 </div>
                 <div className="hidden">

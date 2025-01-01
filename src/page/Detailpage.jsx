@@ -12,6 +12,7 @@ const ModalSpesifikasi = ({
   activeTab,
   currentSpec,
   carData,
+  handleWhatsAppRedirect,
 }) => {
   if (!visible) return null;
 
@@ -84,7 +85,10 @@ const ModalSpesifikasi = ({
 
         {/* Test Drive Button */}
         <div className="flex justify-center mt-6">
-          <button className="w-full py-3 bg-blue-600 text-white rounded-lg text-sm font-medium shadow-lg hover:bg-blue-700 focus:ring-2 focus:ring-blue-400 focus:ring-offset-2">
+          <button
+            onClick={() => handleWhatsAppRedirect(carData.title)}
+            className="w-full py-3 bg-blue-600 text-white rounded-lg text-sm font-medium shadow-lg hover:bg-blue-700 focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+          >
             Test Drive
           </button>
         </div>
@@ -102,6 +106,13 @@ const Detailpage = () => {
   const carData = CAR_DETAILS.find((car) => car.link === id);
 
   const currentSpec = activeTab === "tab1" ? carData?.tab1 : carData?.tab2;
+
+  const handleWhatsAppRedirect = (unitName) => {
+    const message = `Hallo, Saya mau test drive pada unit ${unitName}`;
+    const encodedMessage = encodeURIComponent(message || "Hello!");
+    const waUrl = `https://wa.me/6287856658439?text=${encodedMessage}`;
+    window.open(waUrl, "_blank");
+  };
 
   return (
     <div
@@ -167,7 +178,10 @@ const Detailpage = () => {
                 </ul>
               </div>
               <div className="flex justify-center mt-8">
-                <button className="group flex h-min items-center disabled:opacity-50 disabled:hover:opacity-50 hover:opacity-95 justify-center ring-none rounded-lg shadow-lg font-semibold py-2 px-4 font-dm focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-blue-600 border-b-blue-700 disabled:border-0 disabled:bg-blue-600 disabled:text-white ring-white text-white border-b-4 hover:border-0 active:border-0 hover:text-gray-100 active:bg-blue-600 active:text-gray-300 focus-visible:outline-blue-600 text-sm sm:text-base">
+                <button
+                  onClick={() => handleWhatsAppRedirect(carData.title)}
+                  className="group flex h-min items-center disabled:opacity-50 disabled:hover:opacity-50 hover:opacity-95 justify-center ring-none rounded-lg shadow-lg font-semibold py-2 px-4 font-dm focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-blue-600 border-b-blue-700 disabled:border-0 disabled:bg-blue-600 disabled:text-white ring-white text-white border-b-4 hover:border-0 active:border-0 hover:text-gray-100 active:bg-blue-600 active:text-gray-300 focus-visible:outline-blue-600 text-sm sm:text-base"
+                >
                   Test Drive
                 </button>
               </div>
@@ -233,6 +247,7 @@ const Detailpage = () => {
             activeTab={activeTab}
             currentSpec={currentSpec}
             carData={carData}
+            handleWhatsAppRedirect={handleWhatsAppRedirect}
           />
         </div>
       ) : (

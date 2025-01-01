@@ -7,6 +7,12 @@ import { CAR_LIST } from "./constant";
 const Modal = ({ visible, onClose }) => {
   if (!visible) return null;
 
+  const handleWhatsAppRedirect = () => {
+    const message = "Hallo, Saya mau konsultasi terkait pembelian mobil BYD";
+    const encodedMessage = encodeURIComponent(message || "Hello!");
+    const waUrl = `https://wa.me/6287856658439?text=${encodedMessage}`;
+    window.open(waUrl, "_blank");
+  };
   return (
     <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 transition-opacity duration-300">
       {/* Modal Content */}
@@ -41,7 +47,10 @@ const Modal = ({ visible, onClose }) => {
 
         {/* Contact Actions */}
         <div className="mt-6 flex flex-col gap-4">
-          <button className="w-full px-4 py-2 text-black font-semibold rounded-lg shadow-md hover:bg-green-600 hover:text-white flex items-center">
+          <button
+            onClick={handleWhatsAppRedirect}
+            className="w-full px-4 py-2 text-black font-semibold rounded-lg shadow-md hover:bg-green-600 hover:text-white flex items-center"
+          >
             <img src="/src/assets/whatsapp.png" width={100} height={100} />
             Hubungi via WhatsApp
           </button>
