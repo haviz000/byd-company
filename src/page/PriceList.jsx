@@ -5,7 +5,7 @@ import PriceListComponent from "../components/PriceList";
 const PriceList = () => {
   return (
     <div>
-      <Navbar backgroundColor="neutral-800" textDark />
+      <Navbar backgroundColor="neutral-800 !important" textDark />
       <PriceListComponent />
     </div>
   );
