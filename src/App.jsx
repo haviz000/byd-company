@@ -1,18 +1,24 @@
 import React, { Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
+import Loader from "./components/Loader";
 
 const Home = React.lazy(() => import("./page/Homepage"));
+const Detail = React.lazy(() => import("./page/Detailpage"));
+const Gallery = React.lazy(() => import("./page/Gallery"));
+const About = React.lazy(() => import("./page/PriceList"));
+const Contact = React.lazy(() => import("./page/Contact"));
 
 function App() {
   return (
     <Router>
-      <Suspense fallback={<Loading />}>
+      <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/timeline" element={<Timeline />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/price-list" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/type/:id" element={<Detail />} />
         </Routes>
       </Suspense>
     </Router>
