@@ -148,16 +148,6 @@ const PriceListComponent = () => {
                       </ul>
                     </div>
                   </div>
-                  <div className="flex justify-end">
-                    <button
-                      className="text-blue-400 font-bold"
-                      onClick={() =>
-                        setIsOpenModal({ visible: true, id: item.title })
-                      }
-                    >
-                      Lihat Detail
-                    </button>
-                  </div>
                   <div className="pt-2">
                     <button
                       onClick={() => handleWhatsAppRedirect(item.title)}

@@ -31,8 +31,8 @@ const Footer = () => {
           </h3>
           <p className="text-sm font-bold">BYD BIPO Serpong</p>
           <p>
-            Point 3 alamat BYD Jl. Raya Serpong Kilometer 7 No.30, Pakulonan,
-            Kota, Kec. Serpong Utara, Kota Tangerang Selatan, Banten 15326
+            BYD Jl. Raya Serpong Kilometer 7 No.30, Pakulonan, Kota, Kec.
+            Serpong Utara, Kota Tangerang Selatan, Banten 15326
           </p>
           <p>15326</p>
           <div className="mt-4">

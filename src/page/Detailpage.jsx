@@ -2,8 +2,52 @@ import CountUp from "react-countup";
 import Navbar from "../components/Navbar";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import { CAR_DETAILS } from "../components/constant";
+import { CAR_DETAILS, CAR_PRICE } from "../components/constant";
 import { useMobileResponsive } from "../hooks/useMobileResponsive";
+
+const Modal = ({ visible, onClose, id }) => {
+  if (!visible) return null;
+
+  // Find the car that matches the given id
+  const car = CAR_PRICE.find((car) => car.title === id);
+
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 transition-opacity duration-300">
+      <div className="bg-white p-8 rounded-xl shadow-2xl w-11/12 max-w-sm relative animate-scaleUp">
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"
+          aria-label="Close"
+        >
+          ✕
+        </button>
+        <div className="text-center">
+          {car ? (
+            <>
+              <h2 className="text-2xl font-bold mb-4">{car.title}</h2>
+              <p className="text-sm text-gray-500 mb-6">
+                {car.desc || "No description available."}
+              </p>
+              <h3 className="text-lg font-semibold mb-2 justify-start flex">
+                Specifications:
+              </h3>
+              <div className="">
+                <img
+                  src={car.image}
+                  width={500}
+                  height={500}
+                  className="rounded-lg shadow-xl transition-transform duration-500 ease-in-out transform hover:scale-150 hover:shadow-2xl cursor-pointer"
+                />
+              </div>
+            </>
+          ) : (
+            <p className="text-gray-500">Car details not found.</p>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const ModalSpesifikasi = ({
   visible,
@@ -13,6 +57,7 @@ const ModalSpesifikasi = ({
   currentSpec,
   carData,
   handleWhatsAppRedirect,
+  setIsOpenModal,
 }) => {
   if (!visible) return null;
 
@@ -84,12 +129,18 @@ const ModalSpesifikasi = ({
         </div>
 
         {/* Test Drive Button */}
-        <div className="flex justify-center mt-6">
+        <div className="flex flex-col gap-4 justify-center mt-6">
           <button
             onClick={() => handleWhatsAppRedirect(carData.title)}
             className="w-full py-3 bg-blue-600 text-white rounded-lg text-sm font-medium shadow-lg hover:bg-blue-700 focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
           >
             Test Drive
+          </button>
+          <button
+            className="group flex h-min items-center disabled:opacity-50 disabled:hover:opacity-50 hover:opacity-95 justify-center ring-none rounded-lg shadow-lg font-semibold py-2 px-4 font-dm focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-red-600 border-b-red-700 disabled:border-0 disabled:bg-red-600 disabled:text-white ring-white text-white border-b-4 hover:border-0 active:border-0 hover:text-gray-100 active:bg-red-600 active:text-gray-300 focus-visible:outline-red-600 text-sm sm:text-base"
+            onClick={() => setIsOpenModal({ visible: true, id: carData.title })}
+          >
+            More Detail
           </button>
         </div>
       </div>
@@ -102,6 +153,7 @@ const Detailpage = () => {
   const [activeTab, setActiveTab] = useState("tab2");
   const isMobile = useMobileResponsive();
   const [showModalSpec, setShowModalSpec] = useState(false);
+  const [isOpenModal, setIsOpenModal] = useState({ visible: false, id: "" });
 
   const carData = CAR_DETAILS.find((car) => car.link === id);
 
@@ -177,12 +229,20 @@ const Detailpage = () => {
                   </li>
                 </ul>
               </div>
-              <div className="flex justify-center mt-8 h-6">
+              <div className="flex gap-4 mt-4 h-6">
                 <button
                   onClick={() => handleWhatsAppRedirect(carData.title)}
                   className="group flex h-min items-center disabled:opacity-50 disabled:hover:opacity-50 hover:opacity-95 justify-center ring-none rounded-lg shadow-lg font-semibold py-2 px-4 font-dm focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-blue-600 border-b-blue-700 disabled:border-0 disabled:bg-blue-600 disabled:text-white ring-white text-white border-b-4 hover:border-0 active:border-0 hover:text-gray-100 active:bg-blue-600 active:text-gray-300 focus-visible:outline-blue-600 text-sm sm:text-base"
                 >
                   Test Drive
+                </button>
+                <button
+                  className="group flex h-min items-center disabled:opacity-50 disabled:hover:opacity-50 hover:opacity-95 justify-center ring-none rounded-lg shadow-lg font-semibold py-2 px-4 font-dm focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-red-600 border-b-red-700 disabled:border-0 disabled:bg-red-600 disabled:text-white ring-white text-white border-b-4 hover:border-0 active:border-0 hover:text-gray-100 active:bg-red-600 active:text-gray-300 focus-visible:outline-red-600 text-sm sm:text-base"
+                  onClick={() =>
+                    setIsOpenModal({ visible: true, id: carData.title })
+                  }
+                >
+                  More Detail
                 </button>
               </div>
             </div>
@@ -191,7 +251,7 @@ const Detailpage = () => {
             {isMobile && (
               <div className="flex justify-center mb-12">
                 <button
-                  className="border hover:bg-blue-800 font-mono text-white p-2 rounded-lg opacity-80"
+                  className="border hover:bg-red-800 font-mono text-white p-2 rounded-lg opacity-80"
                   onClick={() => setShowModalSpec(true)}
                 >
                   Detail Spesifikasi
@@ -248,6 +308,12 @@ const Detailpage = () => {
             currentSpec={currentSpec}
             carData={carData}
             handleWhatsAppRedirect={handleWhatsAppRedirect}
+            setIsOpenModal={setIsOpenModal}
+          />
+          <Modal
+            visible={isOpenModal.visible}
+            onClose={() => setIsOpenModal({ visible: false })}
+            id={isOpenModal.id}
           />
         </div>
       ) : (
