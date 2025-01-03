@@ -26,7 +26,7 @@ const Homepage = () => {
         <Navbar backgroundColor="transparent" />
       </div>
       <div className="">
-        <Carousell items={items} />
+        <Carousell items={items} isAutoSlide={true}/>
       </div>
 
       <div className="w-full text-center pb-24 font-Dancings text-2xl text-black mt-12">

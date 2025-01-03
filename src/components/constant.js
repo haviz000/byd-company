@@ -74,10 +74,10 @@ export const CAR_DETAILS = [
     link: "byd-seal",
     title: "BYD SEAL",
     row1: "Jarak (NEDC)",
-    row1Value: 3.8,
+    row1Value: 650,
     row1Suffix: "Detik",
     row2: "0-100km/j",
-    row2Value: 650,
+    row2Value: 3.8,
     row2Suffix: "KM",
     row3: "Kapasitas Baterai",
     row3Value: 82.5,
@@ -210,8 +210,7 @@ export const CAR_PRICE = [
         price: "465.000.000",
       },
     ],
-    desc:
-      "BYD Atto 3 Advance SUV crossover listrik kompak yang menawarkan keseimbangan antara performa dan efisiensi.",
+    desc: "BYD Atto 3 Advance SUV crossover listrik kompak yang menawarkan keseimbangan antara performa dan efisiensi.",
     image: descAtto,
   },
   {

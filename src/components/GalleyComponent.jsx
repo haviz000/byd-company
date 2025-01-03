@@ -1,12 +1,55 @@
 import { useState } from "react";
 import {
   atto31,
-  banner,
   dolphin_model,
   m6_model,
   pelanggan_1,
-  pelanggan_2,
+  seal1,
+  seal2,
+  seal3,
+  seal4,
+  seal5,
+  seal6,
+  seal7,
+  seal8,
+  seal9,
+  seal10,
+  seal11,
+  seal12,
+  seal13,
+  seal14,
+  seal15,
   seal_model,
+  m61,
+  m62,
+  m63,
+  m64,
+  m65,
+  m66,
+  m67,
+  m68,
+  m69,
+  m610,
+  m611,
+  dp1,
+  dp2,
+  dp3,
+  dp4,
+  dp5,
+  dp6,
+  dp7,
+  dp8,
+  dp9,
+  dp10,
+  atto1,
+  atto2,
+  atto3,
+  atto4,
+  atto6,
+  atto5,
+  atto7,
+  atto8,
+  atto9,
 } from "../assets";
 import { useMobileResponsive } from "../hooks/useMobileResponsive";
 import Carousell from "./Carousell";
@@ -18,61 +61,193 @@ const Modal = ({ visible, onClose, id }) => {
 
   const SealItems = [
     {
-      image: seal_model,
-      alt: "Slide 1",
+      image: seal1,
+      alt: "Seal 1",
     },
     {
-      image: seal_model,
-      alt: "Slide 2",
+      image: seal2,
+      alt: "Seal 2",
     },
     {
-      image: seal_model,
-      alt: "Slide 3",
+      image: seal3,
+      alt: "Seal 3",
+    },
+    {
+      image: seal4,
+      alt: "Seal 4",
+    },
+    {
+      image: seal5,
+      alt: "Seal 5",
+    },
+    {
+      image: seal6,
+      alt: "Seal 6",
+    },
+    {
+      image: seal7,
+      alt: "Seal 7",
+    },
+    {
+      image: seal8,
+      alt: "Seal 8",
+    },
+    {
+      image: seal9,
+      alt: "Seal 9",
+    },
+    {
+      image: seal10,
+      alt: "Seal 10",
+    },
+    {
+      image: seal11,
+      alt: "Seal 11",
+    },
+    {
+      image: seal12,
+      alt: "Seal 12",
+    },
+    {
+      image: seal13,
+      alt: "Seal 13",
+    },
+    {
+      image: seal14,
+      alt: "Seal 14",
+    },
+    {
+      image: seal15,
+      alt: "Seal 15",
     },
   ];
 
   const AttoItems = [
     {
-      image: atto31,
-      alt: "Slide 1",
+      image: atto1,
+      alt: "Atto 1",
     },
     {
-      image: atto31,
-      alt: "Slide 2",
+      image: atto2,
+      alt: "Atto 2",
     },
     {
-      image: atto31,
-      alt: "Slide 3",
+      image: atto3,
+      alt: "Atto 3",
+    },
+    {
+      image: atto4,
+      alt: "Atto 4",
+    },
+    {
+      image: atto5,
+      alt: "Atto 5",
+    },
+    {
+      image: atto6,
+      alt: "Atto 6",
+    },
+    {
+      image: atto7,
+      alt: "Atto 7",
+    },
+    {
+      image: atto8,
+      alt: "Atto 8",
+    },
+    {
+      image: atto9,
+      alt: "Atto 9",
     },
   ];
 
   const M6Items = [
     {
-      image: m6_model,
-      alt: "Slide 1",
+      image: m61,
+      alt: "M6 1",
     },
     {
-      image: m6_model,
-      alt: "Slide 2",
+      image: m62,
+      alt: "M6 2",
     },
     {
-      image: m6_model,
-      alt: "Slide 3",
+      image: m63,
+      alt: "M6 3",
+    },
+    {
+      image: m64,
+      alt: "M6 4",
+    },
+    {
+      image: m65,
+      alt: "M6 5",
+    },
+    {
+      image: m66,
+      alt: "M6 6",
+    },
+    {
+      image: m67,
+      alt: "M6 7",
+    },
+    {
+      image: m68,
+      alt: "M6 8",
+    },
+    {
+      image: m69,
+      alt: "M6 9",
+    },
+    {
+      image: m610,
+      alt: "M6 10",
+    },
+    {
+      image: m611,
+      alt: "M6 11",
     },
   ];
 
   const DolphinItems = [
     {
-      image: dolphin_model,
-      alt: "Slide 1",
+      image: dp1,
+      alt: "Dolphin 1",
     },
     {
-      image: dolphin_model,
-      alt: "Slide 2",
+      image: dp2,
+      alt: "Dolphin 2",
     },
     {
-      image: dolphin_model,
-      alt: "Slide 3",
+      image: dp3,
+      alt: "Dolphin 3",
+    },
+    {
+      image: dp4,
+      alt: "Dolphin 4",
+    },
+    {
+      image: dp5,
+      alt: "Dolphin 5",
+    },
+    {
+      image: dp6,
+      alt: "Dolphin 6",
+    },
+    {
+      image: dp7,
+      alt: "Dolphin 7",
+    },
+    {
+      image: dp8,
+      alt: "Dolphin 8",
+    },
+    {
+      image: dp9,
+      alt: "Dolphin 9",
+    },
+    {
+      image: dp10,
+      alt: "Dolphin 10",
     },
   ];
 
@@ -183,7 +358,7 @@ const GalleryComponent = () => {
           <a
             href="#"
             onClick={() => setShowModalGallery({ visible: true, id: "byd-m6" })}
-            className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80"
+            className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80"
           >
             <img
               src={m6_model}
@@ -204,7 +379,7 @@ const GalleryComponent = () => {
             onClick={() =>
               setShowModalGallery({ visible: true, id: "byd-atto3" })
             }
-            className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80"
+            className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80"
           >
             <img
               src={atto31}

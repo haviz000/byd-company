@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-const Carousell = ({ items }) => {
+const Carousell = ({ items, isAutoSlide }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
@@ -12,6 +12,17 @@ const Carousell = ({ items }) => {
       prevIndex === 0 ? items.length - 1 : prevIndex - 1
     );
   };
+
+  // Auto-slide functionality
+  useEffect(() => {
+    if (isAutoSlide) {
+      const interval = setInterval(() => {
+        nextSlide();
+      }, 3000); // Change slide every 3 seconds
+
+      return () => clearInterval(interval);
+    }
+  }, [items.length]); // Re-run if items length changes
 
   return (
     <div className="relative w-full mx-auto">

@@ -48,12 +48,35 @@ const Modal = ({ visible, onClose, id }) => {
 
 const PriceListComponent = () => {
   const [isOpenModal, setIsOpenModal] = useState({ visible: false, id: "" });
+
+  const handleDownloadBrochure = (id) => {
+    let destinyId = "";
+
+    if (id === "BYD SEAL") {
+      destinyId = "15Xg4grT6ok9ZfV3N1UFly-t90CUp68TR";
+    }
+    if (id === "BYD ATTO 3") {
+      destinyId = "15Z-ln45Pgq35Z-gV_4bp1et4J15pglgz";
+    }
+    if (id === "BYD M6") {
+      destinyId = "15V3_7MK1cBvSbqxg9uYNDYyPQ1KojcA7";
+    }
+    if (id === "BYD DOLPHIN") {
+      destinyId = "15Uj4EpiO5-4u_Yj8X9NCc2MeaYEJqaCz";
+    }
+
+    window.open(
+      `https://drive.google.com/u/1/uc?id=${destinyId}&export=download`
+    );
+  };
+
   const handleWhatsAppRedirect = (unitName) => {
     const message = `Hallo, Saya mau beli unit ${unitName}`;
     const encodedMessage = encodeURIComponent(message || "Hello!");
     const waUrl = `https://wa.me/6287856658439?text=${encodedMessage}`;
     window.open(waUrl, "_blank");
   };
+
   return (
     <div className="space-y-5 px-8 py-12 h-screen mb-6">
       <div className="container flex space-x-2">
@@ -147,6 +170,12 @@ const PriceListComponent = () => {
                         </li>
                       </ul>
                     </div>
+                  </div>
+                  <div
+                    onClick={() => handleDownloadBrochure(item.title)}
+                    className="flex justify-end text-blue-400 font-mono cursor-pointer hover:text-blue-600"
+                  >
+                    Download Detail
                   </div>
                   <div className="pt-2">
                     <button
