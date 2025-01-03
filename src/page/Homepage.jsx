@@ -60,7 +60,7 @@ const Homepage = () => {
         </div>
       </div>
 
-      <div className="flex justify-around my-24">
+      <div className="flex justify-around my-24 flex-col md:flex-row">
         {CAR_LIST.map((item) => (
           <Link
             to={item.link}
