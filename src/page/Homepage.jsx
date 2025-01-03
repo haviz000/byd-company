@@ -44,8 +44,6 @@ const Homepage = () => {
             Let me guide you in finding the perfect electric vehicle for your
             lifestyle. Your journey toward innovation and sustainability starts
             here.
-            <br />
-            <span className="text-red-500">BYD</span> Motor Indonesia.
           </div>
           <div className="mt-8 md:mt-12">
             <div className="font-Dancings text-xl md:text-2xl">
