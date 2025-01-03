@@ -156,7 +156,7 @@ const Navbar = ({ backgroundColor, textDark }) => {
         ) : (
           // Mobile Menu
           <div
-            className={`fixed bottom-0 left-0 pl-16 bg-${backgroundColor} w-full`}
+            className={`fixed bottom-0 left-0 pl-16 bg-neutral-800 w-full`}
           >
             <div className="w-full flex gap-2 text-white font-mono">
               <div

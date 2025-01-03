@@ -1,6 +1,53 @@
+import { useState } from "react";
 import { CAR_PRICE } from "./constant";
+import { descSeal } from "../assets";
+
+const Modal = ({ visible, onClose, id }) => {
+  if (!visible) return null;
+
+  // Find the car that matches the given id
+  const car = CAR_PRICE.find((car) => car.title === id);
+
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 transition-opacity duration-300">
+      <div className="bg-white p-8 rounded-xl shadow-2xl w-11/12 max-w-sm relative animate-scaleUp">
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"
+          aria-label="Close"
+        >
+          ✕
+        </button>
+        <div className="text-center">
+          {car ? (
+            <>
+              <h2 className="text-2xl font-bold mb-4">{car.title}</h2>
+              <p className="text-sm text-gray-500 mb-6">
+                {car.desc || "No description available."}
+              </p>
+              <h3 className="text-lg font-semibold mb-2 justify-start flex">
+                Specifications:
+              </h3>
+              <div className="">
+                <img
+                  src={car.image}
+                  width={500}
+                  height={500}
+                  className="rounded-lg shadow-xl transition-transform duration-500 ease-in-out transform hover:scale-150 hover:shadow-2xl cursor-pointer"
+                />
+              </div>
+            </>
+          ) : (
+            <p className="text-gray-500">Car details not found.</p>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const PriceListComponent = () => {
+  const [isOpenModal, setIsOpenModal] = useState({ visible: false, id: "" });
   const handleWhatsAppRedirect = (unitName) => {
     const message = `Hallo, Saya mau beli unit ${unitName}`;
     const encodedMessage = encodeURIComponent(message || "Hello!");
@@ -62,7 +109,7 @@ const PriceListComponent = () => {
                               stroke-linejoin="round"
                             ></path>
                           </svg>
-                          <span>Ready Test Drive</span>
+                          <span>Tersedia unit test drive</span>
                         </li>
                         <li className="flex items-center font-medium space-x-2 text-black">
                           <svg
@@ -101,6 +148,16 @@ const PriceListComponent = () => {
                       </ul>
                     </div>
                   </div>
+                  <div className="flex justify-end">
+                    <button
+                      className="text-blue-400 font-bold"
+                      onClick={() =>
+                        setIsOpenModal({ visible: true, id: item.title })
+                      }
+                    >
+                      Lihat Detail
+                    </button>
+                  </div>
                   <div className="pt-2">
                     <button
                       onClick={() => handleWhatsAppRedirect(item.title)}
@@ -118,74 +175,24 @@ const PriceListComponent = () => {
                         <path
                           d="M3 12.4999H21L14 19.4999M14 5.5L18 9.5"
                           stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                         ></path>
                       </svg>
                     </button>
                   </div>
-                </div>
-                <div className="hidden">
-                  <ul className="space-y-2 pt-8">
-                    <li className="flex items-center font-medium space-x-2 text-black">
-                      <svg
-                        className="h-4 w-4"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M16.4444 3.03947C15.1056 2.37412 13.5965 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 11.6244 21.9793 11.2537 21.939 10.8889M9 11L12 14L22 4"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        ></path>
-                      </svg>
-                      <span>Everything in Free</span>
-                    </li>
-                    <li className="flex items-center font-medium space-x-2 text-black">
-                      <svg
-                        className="h-4 w-4"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M16.4444 3.03947C15.1056 2.37412 13.5965 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 11.6244 21.9793 11.2537 21.939 10.8889M9 11L12 14L22 4"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        ></path>
-                      </svg>
-                      <span>5,000 events / month</span>
-                    </li>
-                    <li className="flex items-center font-medium space-x-2 text-black">
-                      <svg
-                        className="h-4 w-4"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M16.4444 3.03947C15.1056 2.37412 13.5965 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 11.6244 21.9793 11.2537 21.939 10.8889M9 11L12 14L22 4"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        ></path>
-                      </svg>
-                      <span>Unlimited seats</span>
-                    </li>
-                  </ul>
                 </div>
               </div>
             </div>
           </div>
         ))}
       </div>
+      <Modal
+        visible={isOpenModal.visible}
+        onClose={() => setIsOpenModal({ visible: false })}
+        id={isOpenModal.id}
+      />
     </div>
   );
 };

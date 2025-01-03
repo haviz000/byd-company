@@ -5,4 +5,17 @@
 @font-face {
   font-family: "Dancings";
   src: url("/font/DancingScript-VariableFont_wght.ttf") format("truetype");
+
+}
+@font-face {
+  font-family: "Motterdam";
+  src: url("/font/Motterdam-K74zp.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Motterdam2";
+  src: url("/font/Motterdam-MVanr.otf") format("truetype");
+}
+@font-face {
+  font-family: "Brother";
+  src: url("/font/BrotherlandsignatureBold-rg7jA.otf") format("truetype");
 }

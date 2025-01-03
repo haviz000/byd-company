@@ -1,4 +1,17 @@
-import { atto31, byd_atto_3, byd_dolphin, byd_m6, byd_seal, dolphin_model, m6_model, seal_model } from "../assets";
+import {
+  atto31,
+  byd_atto_3,
+  byd_dolphin,
+  byd_m6,
+  byd_seal,
+  descAtto,
+  descDolphin,
+  descM6,
+  descSeal,
+  dolphin_model,
+  m6_model,
+  seal_model,
+} from "../assets";
 
 export const CAR_LIST = [
   {
@@ -167,6 +180,8 @@ export const CAR_PRICE = [
         price: "629.000.000",
       },
     ],
+    desc: "BYD Seal adalah sedan listrik premium dengan beberapa varian yang menawarkan performa dan jangkauan berbeda",
+    image: descSeal,
   },
   {
     title: "BYD DOLPHIN",
@@ -180,6 +195,8 @@ export const CAR_PRICE = [
         price: "365.000.000",
       },
     ],
+    desc: "BYD Dolphin: Hatchback Listrik yang Kompak dan Efisien Hatchback listrik yang cocok untuk penggunaan perkotaan, menawarkan desain modern dan efisiensi tinggi.",
+    image: descDolphin,
   },
   {
     title: "BYD ATTO 3",
@@ -193,22 +210,23 @@ export const CAR_PRICE = [
         price: "465.000.000",
       },
     ],
+    desc:
+      "BYD Atto 3 Advance SUV crossover listrik kompak yang menawarkan keseimbangan antara performa dan efisiensi.",
+    image: descAtto,
   },
   {
     title: "BYD M6",
     type: [
       {
-        name: "Standart 7 Seater (420 km)",
-        price: "379.000.000",
-      },
-      {
-        name: "Standart 7 Seater (530 km)",
-        price: "465.000.000",
+        name: "Standart 7 Seater",
+        price: "419.000.000",
       },
       {
         name: "Superior Captain 6 Seater",
         price: "429.000.000",
       },
     ],
+    desc: "BYD M6: MPV Nyaman untuk Keluarga Multi-purpose vehicle (MPV) dengan kabin luas, kenyamanan tinggi, dan opsi konfigurasi kursi untuk memenuhi kebutuhan keluarga.",
+    image: descM6,
   },
 ];
