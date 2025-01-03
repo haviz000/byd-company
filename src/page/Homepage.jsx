@@ -33,29 +33,35 @@ const Homepage = () => {
         "Powering Your Drive, Empowering the Future"
       </div>
 
-      <div className="w-full h-auto flex flex-col md:flex-row justify-around px-6 md:px-12 mb-12 bg-slate-800 text-white py-24">
-        <div className="text-center md:text-left">
+      <div className="w-full h-auto flex flex-col md:flex-row justify-between items-center px-6 md:px-12 mb-12 bg-slate-800 text-white py-12">
+        <div className="text-center md:text-left md:w-1/2">
           <div className="font-Motterdam font-bold text-3xl md:text-4xl mb-4">
-            Hello,
+            Welcome!
           </div>
-          <div className="font-mono text-xs md:text-sm">
-            Welcome in <span className="text-red-500">BYD</span> motor Indonesia
+          <div className="font-mono text-sm md:text-base leading-relaxed md:leading-loose">
+            Explore the future of sustainable mobility with Fauzan Azila, your
+            trusted <span className="text-red-500">BYD</span> Brand Consultant.
+            Let me guide you in finding the perfect electric vehicle for your
+            lifestyle. Your journey toward innovation and sustainability starts
+            here.
+            <br />
+            <span className="text-red-500">BYD</span> Motor Indonesia.
           </div>
           <div className="mt-8 md:mt-12">
             <div className="font-Dancings text-xl md:text-2xl">
               Fauzan Azila
             </div>
-            <div className="font-mono text-sm md:text-md">
+            <div className="font-mono text-sm md:text-base">
               <span className="text-red-500">BYD</span> Brand Consultant
             </div>
           </div>
         </div>
-        <div className="mt-6 md:mt-0">
+
+        <div className="mt-6 md:mt-0 md:w-1/3">
           <img
             src={pelanggan_2}
-            width={400}
-            height={400}
-            className="rounded-lg shadow-xl transition-transform duration-500 ease-in-out transform hover:scale-110 hover:shadow-2xl mx-auto md:mx-0"
+            alt="Fauzan Azila - BYD Consultant"
+            className="w-64 md:w-full max-w-sm rounded-lg shadow-xl transition-transform duration-500 ease-in-out transform hover:scale-110 hover:shadow-2xl mx-auto"
           />
         </div>
       </div>
