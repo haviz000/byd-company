@@ -175,7 +175,7 @@ const PriceListComponent = () => {
                     onClick={() => handleDownloadBrochure(item.title)}
                     className="flex justify-end text-blue-400 font-mono cursor-pointer hover:text-blue-600"
                   >
-                    Download Detail
+                    Download Brosur
                   </div>
                   <div className="pt-2">
                     <button

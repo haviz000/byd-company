@@ -74,10 +74,10 @@ export const CAR_DETAILS = [
     link: "byd-seal",
     title: "BYD SEAL",
     row1: "Jarak (NEDC)",
-    row1Value: 650,
+    row1Value: 3.9,
     row1Suffix: "Detik",
     row2: "0-100km/j",
-    row2Value: 3.8,
+    row2Value: 650,
     row2Suffix: "KM",
     row3: "Kapasitas Baterai",
     row3Value: 82.5,
@@ -218,10 +218,14 @@ export const CAR_PRICE = [
     type: [
       {
         name: "Standart 7 Seater",
-        price: "419.000.000",
+        price: "379.000.000",
       },
       {
         name: "Superior Captain 6 Seater",
+        price: "419.000.000",
+      },
+      {
+        name: "Superior 7 seat",
         price: "429.000.000",
       },
     ],

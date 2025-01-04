@@ -266,7 +266,7 @@ const Detailpage = () => {
                     start={0}
                     end={carData.row1Value}
                     duration={2.5}
-                    decimals={1}
+                    decimals={carData.title === "BYD SEAL" ? 1 : null}
                     suffix={carData.row1Suffix}
                   />
                 </div>
@@ -280,6 +280,7 @@ const Detailpage = () => {
                     start={0}
                     end={carData.row2Value}
                     duration={2.5}
+                    decimals={carData.title === "BYD SEAL" ? null : 1}
                     suffix={carData.row2Suffix}
                   />
                 </div>
