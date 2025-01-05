@@ -36,6 +36,7 @@ const Modal = ({ visible, onClose, id }) => {
                   src={car.image}
                   width={500}
                   height={500}
+                  alt="Harga Mobil BYD"
                   className="rounded-lg shadow-xl transition-transform duration-500 ease-in-out transform hover:scale-150 hover:shadow-2xl cursor-pointer"
                 />
               </div>

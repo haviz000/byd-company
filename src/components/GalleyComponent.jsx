@@ -345,7 +345,7 @@ const GalleryComponent = () => {
             <img
               src={seal_model}
               loading="lazy"
-              alt="Photo by Minh Pham"
+              alt="Mobil BYD SEAL"
               className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
             />
 
@@ -363,7 +363,7 @@ const GalleryComponent = () => {
             <img
               src={m6_model}
               loading="lazy"
-              alt="Photo by Magicle"
+              alt="Mobil BYD M6"
               className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
             />
 
@@ -384,7 +384,7 @@ const GalleryComponent = () => {
             <img
               src={atto31}
               loading="lazy"
-              alt="Photo by Martin Sanchez"
+              alt="Mobil BYD ATTO 3"
               className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
             />
 
@@ -404,7 +404,7 @@ const GalleryComponent = () => {
             <img
               src={dolphin_model}
               loading="lazy"
-              alt="Photo by Lorenzo Herrera"
+              alt="Mobil BYD Dolphin"
               className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
             />
 
@@ -424,7 +424,7 @@ const GalleryComponent = () => {
             <img
               src={pelanggan_1}
               loading="lazy"
-              alt="Photo by Lorenzo Herrera"
+              alt="Mobil BYD JABODETABEK"
               className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
             />
 

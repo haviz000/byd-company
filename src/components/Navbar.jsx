@@ -31,7 +31,7 @@ const Modal = ({ visible, onClose }) => {
         <div className="flex justify-center mb-6">
           <img
             src={photo_card}
-            alt="Fauzan Azila"
+            alt="Fauzan Azila Brand Consultant BYD"
             className="w-32 h-32 rounded-full shadow-lg"
           />
         </div>
@@ -52,7 +52,7 @@ const Modal = ({ visible, onClose }) => {
             onClick={handleWhatsAppRedirect}
             className="w-full px-4 py-2 text-black font-semibold rounded-lg shadow-md hover:bg-green-600 hover:text-white flex items-center"
           >
-            <img src={whatsapp} width={100} height={100} />
+            <img src={whatsapp} width={100} height={100} alt="Hubungi Penjual BYD" />
             Hubungi via WhatsApp
           </button>
         </div>
@@ -117,7 +117,7 @@ const Navbar = ({ backgroundColor, textDark }) => {
             width="100px"
             height="100px"
             className="cursor-pointer"
-            alt="BYD Logo"
+            alt="BYD LOGO"
           />
         </Link>
 

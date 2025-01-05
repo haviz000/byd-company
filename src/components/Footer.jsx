@@ -20,7 +20,7 @@ const Footer = () => {
             </a>
           </p>
           <p className="mt-4 text-sm">
-            Feel free to contact us and chat with me.
+            Feel free to contact us and chat with me
           </p>
         </div>
 

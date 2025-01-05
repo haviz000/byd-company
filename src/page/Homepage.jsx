@@ -70,7 +70,7 @@ const Homepage = () => {
             to={item.link}
             className="items-center flex flex-col rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-110 hover:shadow-2xl mx-auto md:mx-0"
           >
-            <img src={item.img} width={400} height={400} />
+            <img src={item.img} width={400} height={400} alt="Harga Mobil BYD" />
             <div className="font-mono font-semibold">{item.title}</div>
           </Link>
         ))}
