@@ -61,6 +61,18 @@ const Modal = ({ visible, onClose, id }) => {
 
   const SealItems = [
     {
+      image: seal8,
+      alt: "Seal 8",
+    },
+    {
+      image: seal9,
+      alt: "Seal 9",
+    },
+    {
+      image: seal10,
+      alt: "Seal 10",
+    },
+    {
       image: seal1,
       alt: "Seal 1",
     },
@@ -87,18 +99,6 @@ const Modal = ({ visible, onClose, id }) => {
     {
       image: seal7,
       alt: "Seal 7",
-    },
-    {
-      image: seal8,
-      alt: "Seal 8",
-    },
-    {
-      image: seal9,
-      alt: "Seal 9",
-    },
-    {
-      image: seal10,
-      alt: "Seal 10",
     },
     {
       image: seal11,
@@ -163,6 +163,22 @@ const Modal = ({ visible, onClose, id }) => {
 
   const M6Items = [
     {
+      image: m611,
+      alt: "M6 11",
+    },
+    {
+      image: m66,
+      alt: "M6 6",
+    },
+    {
+      image: m67,
+      alt: "M6 7",
+    },
+    {
+      image: m68,
+      alt: "M6 8",
+    },
+    {
       image: m61,
       alt: "M6 1",
     },
@@ -183,18 +199,6 @@ const Modal = ({ visible, onClose, id }) => {
       alt: "M6 5",
     },
     {
-      image: m66,
-      alt: "M6 6",
-    },
-    {
-      image: m67,
-      alt: "M6 7",
-    },
-    {
-      image: m68,
-      alt: "M6 8",
-    },
-    {
       image: m69,
       alt: "M6 9",
     },
@@ -202,13 +206,21 @@ const Modal = ({ visible, onClose, id }) => {
       image: m610,
       alt: "M6 10",
     },
-    {
-      image: m611,
-      alt: "M6 11",
-    },
   ];
 
   const DolphinItems = [
+    {
+      image: dp8,
+      alt: "Dolphin 8",
+    },
+    {
+      image: dp9,
+      alt: "Dolphin 9",
+    },
+    {
+      image: dp10,
+      alt: "Dolphin 10",
+    },
     {
       image: dp1,
       alt: "Dolphin 1",
@@ -236,18 +248,6 @@ const Modal = ({ visible, onClose, id }) => {
     {
       image: dp7,
       alt: "Dolphin 7",
-    },
-    {
-      image: dp8,
-      alt: "Dolphin 8",
-    },
-    {
-      image: dp9,
-      alt: "Dolphin 9",
-    },
-    {
-      image: dp10,
-      alt: "Dolphin 10",
     },
   ];
 

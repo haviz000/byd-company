@@ -173,11 +173,11 @@ export const CAR_PRICE = [
     type: [
       {
         name: "Seal Performance AWD",
-        price: "719.000.000",
+        price: "726.000.000",
       },
       {
         name: "Seal Premium",
-        price: "629.000.000",
+        price: "635.000.000",
       },
     ],
     desc: "BYD Seal adalah sedan listrik premium dengan beberapa varian yang menawarkan performa dan jangkauan berbeda",
@@ -188,11 +188,11 @@ export const CAR_PRICE = [
     type: [
       {
         name: "Dolphin Premium",
-        price: "425.000.000",
+        price: "429.000.000",
       },
       {
         name: "Dolphin Dynamic",
-        price: "365.000.000",
+        price: "369.000.000",
       },
     ],
     desc: "BYD Dolphin: Hatchback Listrik yang Kompak dan Efisien Hatchback listrik yang cocok untuk penggunaan perkotaan, menawarkan desain modern dan efisiensi tinggi.",
@@ -203,11 +203,11 @@ export const CAR_PRICE = [
     type: [
       {
         name: "Atto 3 Superior",
-        price: "515.000.000",
+        price: "520.000.000",
       },
       {
         name: "Atto 3 Advance",
-        price: "465.000.000",
+        price: "470.000.000",
       },
     ],
     desc: "BYD Atto 3 Advance SUV crossover listrik kompak yang menawarkan keseimbangan antara performa dan efisiensi.",
@@ -218,15 +218,15 @@ export const CAR_PRICE = [
     type: [
       {
         name: "Standart 7 Seater",
-        price: "379.000.000",
+        price: "383.000.000",
       },
       {
         name: "Superior Captain 6 Seater",
-        price: "419.000.000",
+        price: "433.000.000",
       },
       {
         name: "Superior 7 seat",
-        price: "429.000.000",
+        price: "423.000.000",
       },
     ],
     desc: "BYD M6: MPV Nyaman untuk Keluarga Multi-purpose vehicle (MPV) dengan kabin luas, kenyamanan tinggi, dan opsi konfigurasi kursi untuk memenuhi kebutuhan keluarga.",
