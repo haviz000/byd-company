@@ -10,7 +10,7 @@ const ModelsCard = ({ title, image, link, textDark, onClick }) => {
       <div className={`font-mono ${textDark ? "text-black" : "text-white"}`}>
         {title}
       </div>
-      <img src={image} width="400px" height="400px" alt="BELI MOBIL BYD SERPONG" />
+      <img src={image} width="400px" height="400px" alt="BELI MOBIL BYD PASAR MINGGU" />
     </Link>
   );
 };

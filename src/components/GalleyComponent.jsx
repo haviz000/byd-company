@@ -50,6 +50,7 @@ import {
   atto7,
   atto8,
   atto9,
+  customerM6,
 } from "../assets";
 import { useMobileResponsive } from "../hooks/useMobileResponsive";
 import Carousell from "./Carousell";
@@ -255,6 +256,10 @@ const Modal = ({ visible, onClose, id }) => {
     {
       image: pelanggan_1,
       alt: "Slide 1",
+    },
+    {
+      image: customerM6,
+      alt: "Slide 2",
     },
   ];
 

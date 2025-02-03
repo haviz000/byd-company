@@ -41,8 +41,8 @@ const Modal = ({ visible, onClose }) => {
           <h2 className="text-xl font-bold text-gray-800">Fauzan Azila</h2>
           <p className="text-md text-gray-500">Brand Consultant BYD</p>
           <p className="text-sm text-gray-500">
-            Jl. Raya Serpong Kilometer 7 No.30, Pakulonan, Kota, Kec. Serpong
-            Utara, Kota Tangerang Selatan, Banten 15326
+            Raya Pasar Minggu KM. 18, Block 18 No. 1 Pasar Minggu South Jakarta
+            City, DKI Jakarta
           </p>
         </div>
 
@@ -52,7 +52,12 @@ const Modal = ({ visible, onClose }) => {
             onClick={handleWhatsAppRedirect}
             className="w-full px-4 py-2 text-black font-semibold rounded-lg shadow-md hover:bg-green-600 hover:text-white flex items-center"
           >
-            <img src={whatsapp} width={100} height={100} alt="Hubungi Penjual BYD" />
+            <img
+              src={whatsapp}
+              width={100}
+              height={100}
+              alt="Hubungi Penjual BYD"
+            />
             Hubungi via WhatsApp
           </button>
         </div>
@@ -155,9 +160,7 @@ const Navbar = ({ backgroundColor, textDark }) => {
           </div>
         ) : (
           // Mobile Menu
-          <div
-            className={`fixed bottom-0 left-0 pl-16 bg-neutral-800 w-full`}
-          >
+          <div className={`fixed bottom-0 left-0 pl-16 bg-neutral-800 w-full`}>
             <div className="w-full flex gap-2 text-white font-mono">
               <div
                 className="cursor-pointer"

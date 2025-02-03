@@ -63,3 +63,4 @@ export { default as atto6 } from "./atto.6.jpg";
 export { default as atto7 } from "./atto.7.jpg";
 export { default as atto8 } from "./atto.8.jpg";
 export { default as atto9 } from "./atto.9.jpg";
+export { default as customerM6 } from  './customer-m6.jpg'
