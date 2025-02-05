@@ -31,8 +31,8 @@ const Footer = () => {
           </h3>
           <p className="text-sm font-bold">BYD BIPO Pasar Minggu</p>
           <p>
-            BYD Jl. Raya Pasar Minggu Kilometer 7 No.30, Pakulonan, Kota, Kec.
-            Pasar Minggu Utara, Kota Tangerang Selatan, Banten 15326
+            Jl. Raya Pasar Minggu No.KM.18 18 1, RT.1/RW.1, Pejaten Timur, Ps.
+            Minggu, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12740
           </p>
           <p>15326</p>
           <div className="mt-4">
@@ -60,7 +60,7 @@ const Footer = () => {
             GET OUR LOCATION
           </h3>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4074.4682911383957!2d106.65064187513903!3d-6.2607838612953115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fb8c919b8de1%3A0xc2aca1d216db57d3!2sBYD%20BIPO%20Pasar Minggu!5e1!3m2!1sid!2sid!4v1735875024631!5m2!1sid!2sid"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5295.359960187033!2d106.84345415944318!3d-6.263721801090809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f2499a2ebd71%3A0xa523aa65439ae7e3!2sJl.%20Raya%20Pasar%20Minggu%20No.KM.18%2018%201%2C%20RT.1%2FRW.1%2C%20Pejaten%20Timur%2C%20Ps.%20Minggu%2C%20Kota%20Jakarta%20Selatan%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2012740!5e1!3m2!1sid!2sid!4v1738720065673!5m2!1sid!2sid"
             className="w-full h-64 rounded-lg shadow-lg"
             allowFullScreen=""
             loading="lazy"
